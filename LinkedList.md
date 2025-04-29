@@ -38,6 +38,8 @@ El `LinkedList` se utiliza principalmente cuando se necesita un rendimiento ópt
 
 Es menos adecuado para escenarios con acceso aleatorio intensivo, ya que el acceso a un elemento específico requiere un recorrido desde el inicio de la lista, lo que puede ser menos eficiente que en un `ArrayList`.
 
+---
+
 ### Sintaxis básica:
 
 ```java
@@ -109,5 +111,24 @@ int size = list.size();
 ```java
 for (String item : list) {
     System.out.println(item);
+}
+```
+
+### Ejemplo: 
+
+```java
+import java.util.LinkedList;
+
+public class EjemploLinkedList {
+    public static void main(String[] args) {
+        LinkedList<String> nombres = new LinkedList<>();
+        nombres.add("Ana");
+        nombres.add("Luis");
+        nombres.addFirst("Carlos");
+
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+    }
 }
 ```
