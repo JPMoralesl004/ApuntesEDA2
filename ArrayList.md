@@ -18,6 +18,18 @@ Es una lista ordenada y redimensionable que permite almacenar elementos de tipo 
 
   ---
 
+## ¿Para qué?
+
+El `ArrayList` se utiliza para almacenar datos de forma dinámica. Sus principales ventajas incluyen:
+
+- **Flexibilidad en el tamaño:** A diferencia de los arrays estáticos, el `ArrayList` puede ajustar su tamaño en tiempo de ejecución.
+- **Facilidad de manipulación:** Proporciona métodos para realizar operaciones comunes como insertar, actualizar, eliminar y buscar elementos con facilidad.
+- **Almacenamiento de objetos:** Permite almacenar cualquier tipo de objeto (excepto tipos primitivos, que se pueden almacenar mediante clases envolventes).
+
+Es ideal para situaciones donde se necesita una colección ordenada que pueda cambiar de tamaño y cuando se desea aprovechar los métodos integrados que simplifican la gestión de los datos almacenados.
+
+---
+
 ### Sintaxis básica:
 ```java
   import java.util.ArrayList;
