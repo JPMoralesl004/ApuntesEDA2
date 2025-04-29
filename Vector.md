@@ -103,6 +103,25 @@ for (String item : vector) {
 }
 ```
 
+### Ejemplo: 
+
+```Java
+import java.util.Vector;
+
+public class EjemploVector {
+    public static void main(String[] args) {
+        Vector<Integer> numeros = new Vector<>();
+        numeros.add(10);
+        numeros.add(20);
+        numeros.add(30);
+
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+    }
+}
+```
+
 ### Métodos adicionales para investigación
 
 |Método|Descripción|
@@ -131,22 +150,3 @@ for (String item : vector) {
 | Uso recomendado    | Aplicaciones con múltiples hilos  | Aplicaciones de un solo hilo     |
 | Compatibilidad     | Antigua (desde Java 1.0)          | Más moderna (desde Java 1.2)     |
 | Reemplazo sugerido | Obsoleto para la mayoría de casos | Preferido en código moderno      |
-
-### Ejemplo: 
-
-```Java
-import java.util.Vector;
-
-public class EjemploVector {
-    public static void main(String[] args) {
-        Vector<Integer> numeros = new Vector<>();
-        numeros.add(10);
-        numeros.add(20);
-        numeros.add(30);
-
-        for (int numero : numeros) {
-            System.out.println(numero);
-        }
-    }
-}
-```
