@@ -45,20 +45,20 @@ Es menos adecuado para escenarios con acceso aleatorio intensivo, ya que el acce
 ```java
 import java.util.LinkedList;
 
-LinkedList<String> lista = new LinkedList<>();
+LinkedList<String> list = new LinkedList<>();
 ```
 
 ### Métodos comunes:
 
 ```java
-lista.add("A");             // Agrega al final
-lista.addFirst("Inicio");   // Agrega al principio
-lista.addLast("Fin");       // Agrega al final
-lista.get(0);               // Obtiene el primer elemento
-lista.remove();             // Elimina el primer elemento
-lista.removeLast();         // Elimina el último
-lista.contains("A");        // Verifica si contiene un elemento
-lista.size();               // Tamaño de la lista
+list.add("A");             // Agrega al final
+list.addFirst("Inicio");   // Agrega al principio
+list.addLast("Fin");       // Agrega al final
+list.get(0);               // Obtiene el primer elemento
+list.remove();             // Elimina el primer elemento
+list.removeLast();         // Elimina el último
+list.contains("A");        // Verifica si contiene un elemento
+list.size();               // Tamaño de la lista
 ```
 
 ### Creación
