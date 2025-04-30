@@ -33,7 +33,9 @@ El `ArrayDeque` se utiliza para:
 
 - Como cola (FIFO): usando `offer`, `poll`, `peek`.
 
-## Sintaxis básica:
+---
+
+### Sintaxis básica:
 
 ```Java
 import java.util.ArrayDeque;
@@ -41,7 +43,7 @@ import java.util.ArrayDeque;
 ArrayDeque<String> deque = new ArrayDeque<>();
 ```
 
-## Métodos principales
+### Métodos principales
 
 ```Java
 deque.push("A");           // Inserta un elemento al inicio (modo pila)
@@ -76,6 +78,8 @@ public class EjemploArrayDeque {
     }
 }
 ```
+---
+
 ### Métodos adicionales
 
 |Método|Descripción|
