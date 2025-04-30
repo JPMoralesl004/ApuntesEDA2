@@ -58,7 +58,7 @@ deque.peekLast();          // Devuelve el último elemento sin eliminarlo
 deque.isEmpty();           // Verifica si la deque está vacía
 ```
 
-## Ejemplo:
+### Ejemplo:
 
 ```Java
 import java.util.ArrayDeque;
@@ -76,3 +76,19 @@ public class EjemploArrayDeque {
     }
 }
 ```
+### Métodos adicionales
+
+|Método|Descripción|
+|-|-|
+|`add(E e)`|Añade el elemento especificado al final de esta deque.
+|`offerFirst(E e)`|Inserta el elemento especificado al frente de esta deque.
+|`offerLast(E e)`|Inserta el elemento especificado al final de esta deque.
+|`getFirst()`|Devuelve el primer elemento de esta deque.
+|`getLast()`|Devuelve el último elemento de esta deque.
+|`pollFirst()`|Recupera y elimina el primer elemento de esta deque, o retorna null si esta deque está vacía.
+|`pollLast()`|Recupera y elimina el último elemento de esta deque, o retorna null si esta deque está vacía.
+|`contains(Object o)`|Retorna true si esta deque contiene el elemento especificado.
+|`size()`|Devuelve el número de elementos en esta deque.
+|`clear()`|Elimina todos los elementos de esta deque.
+|`iterator()`|Devuelve un iterador sobre los elementos en esta deque en secuencia correcta.
+|`descendingIterator()`|Devuelve un iterador sobre los elementos en esta deque en secuencia inversa.
