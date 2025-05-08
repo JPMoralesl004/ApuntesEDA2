@@ -37,7 +37,7 @@ Consiste en usar estructuras de control como `for`, `while`, o `do-while` para r
 
 - A veces requiere más código para representar estructuras lógicas complejas.
 
-# Ejemplo
+### Ejemplo
 
 La iteración repite un bloque de código usando estructuras como `for`, `while`, etc.
 
@@ -81,7 +81,7 @@ Una función se llama a sí misma para resolver subproblemas más pequeños del 
 - Puede ser más lenta si no se optimiza (aunque algunos lenguajes hacen tail-call optimization).
 
 
-# Ejemplo:
+### Ejemplo:
 
 La recursividad es cuando una función se llama a sí misma para resolver subproblemas.
 
@@ -133,7 +133,7 @@ Existe una equivalencia fundamental entre ambos enfoques:
 
 Esta equivalencia significa que la elección entre recursividad e iteración no afecta lo que se puede computar, sino cómo se computa.
 
-### Comparación de características
+## Comparación de características
 
 <div align=center>
 
@@ -175,3 +175,125 @@ La comparación entre recursividad e iteración sirve para diversos propósitos 
 - **Perspectivas complementarias**: Fomenta diferentes formas de pensar sobre la solución a un problema.
 - **Percepción algorítmica**: A veces, pensar recursivamente puede revelar soluciones más eficientes que luego pueden implementarse iterativamente.
 - **Comprensión profunda**: Entender ambos enfoques proporciona una visión más completa de las estructuras de control en programación.
+
+---
+
+## Ejemplos:
+
+1. La serie de Fibonacci es:
+```
+0, 1, 1, 2, 3, 5, 8, 13, ...
+```
+Cada número es la suma de los dos anteriores.
+
+### Fibonacci con Iteración
+
+```java
+public class FibonacciIterativo {
+    public static int fibonacci(int n) {
+        if (n <= 1) return n;
+
+        int a = 0, b = 1, resultado = 0;
+        for (int i = 2; i <= n; i++) {
+            resultado = a + b;
+            a = b;
+            b = resultado;
+        }
+        return resultado;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fibonacci(7)); // Salida: 13
+    }
+}
+```
+
+###  Fibonacci con Recursividad
+
+```java
+public class FibonacciRecursivo {
+    public static int fibonacci(int n) {
+        if (n <= 1) return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fibonacci(7)); // Salida: 13
+    }
+}
+```
+**⚠️ Nota: El enfoque recursivo simple es muy ineficiente para valores grandes porque recalcula muchas veces los mismos resultados. Se puede optimizar con memoización o usando programación dinámica.**
+
+2. Definición de nodo del árbol binario
+
+```java
+class Nodo {
+    int valor;
+    Nodo izquierdo, derecho;
+
+    Nodo(int valor) {
+        this.valor = valor;
+        izquierdo = derecho = null;
+    }
+}
+```
+
+Recorrido Inorden (Recursivo)
+
+```java
+
+public class ArbolRecursivo {
+    public static void inorden(Nodo nodo) {
+        if (nodo != null) {
+            inorden(nodo.izquierdo);
+            System.out.print(nodo.valor + " ");
+            inorden(nodo.derecho);
+        }
+    }
+
+    public static void main(String[] args) {
+        Nodo raiz = new Nodo(1);
+        raiz.izquierdo = new Nodo(2);
+        raiz.derecho = new Nodo(3);
+        raiz.izquierdo.izquierdo = new Nodo(4);
+        raiz.izquierdo.derecho = new Nodo(5);
+
+        inorden(raiz); // Salida: 4 2 5 1 3
+    }
+}
+```
+
+Recorrido Inorden (Iterativo)
+
+```java
+
+import java.util.Stack;
+
+public class ArbolIterativo {
+    public static void inorden(Nodo raiz) {
+        Stack<Nodo> stack = new Stack<>();
+        Nodo actual = raiz;
+
+        while (actual != null || !stack.isEmpty()) {
+            while (actual != null) {
+                stack.push(actual);
+                actual = actual.izquierdo;
+            }
+
+            actual = stack.pop();
+            System.out.print(actual.valor + " ");
+            actual = actual.derecho;
+        }
+    }
+
+    public static void main(String[] args) {
+        Nodo raiz = new Nodo(1);
+        raiz.izquierdo = new Nodo(2);
+        raiz.derecho = new Nodo(3);
+        raiz.izquierdo.izquierdo = new Nodo(4);
+        raiz.izquierdo.derecho = new Nodo(5);
+
+        inorden(raiz); // Salida: 4 2 5 1 3
+    }
+}
+```
